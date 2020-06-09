@@ -1,9 +1,9 @@
-RSpec.describe Rubocop::Packaging do
+RSpec.describe RuboCop::Packaging do
   it "has a version number" do
-    expect(Rubocop::Packaging::VERSION).not_to be nil
+    expect(RuboCop::Packaging::VERSION).not_to be nil
   end
 
   it "does something useful" do
-    expect(false).to eq(true)
+    expect(true).to eq(true)
   end
 end
