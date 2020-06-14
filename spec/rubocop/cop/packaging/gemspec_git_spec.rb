@@ -16,6 +16,17 @@ RSpec.describe RuboCop::Cop::Packaging::GemspecGit do
     RUBY
   end
 
+  it 'registers an offense when using `git` multiple times' do
+    expect_offense(<<~RUBY)
+      Gem::Specification.new do |spec|
+        spec.files = `git ls-files`.split("\\n")
+                     ^^^^^^^^^^^^^^ #{message}
+        spec.executables = `git ls-files`.split("\\n")
+                           ^^^^^^^^^^^^^^ #{message}
+      end
+    RUBY
+  end
+
   it 'registers an offense when using `git` for :files= but differently' do
     expect_offense(<<~RUBY)
       Gem::Specification.new do |spec|

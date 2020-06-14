@@ -54,6 +54,16 @@ module RuboCop
 
         def investigate(processed_source)
           xstr(processed_source.ast).each do |node|
+            # return if processed_source.blank?
+
+            # puts processed_source.ast
+            # processed_source.ast.each do |node|
+            # puts xstr(node)
+            # puts node
+            # puts node.loc.expression
+            # puts node.type
+            # puts node.children
+            # puts node.source
             add_offense(
               processed_source.ast,
               location: node.loc.expression,
