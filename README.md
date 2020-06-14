@@ -1,4 +1,4 @@
-# Rubocop::Packaging
+# RuboCop::Packaging
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/rubocop/packaging`. To experiment with that code, run `bin/console` for an interactive prompt.
 
@@ -37,4 +37,4 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/[USERN
 
 ## Code of Conduct
 
-Everyone interacting in the Rubocop::Packaging project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/rubocop-packaging/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the RuboCop::Packaging project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/rubocop-packaging/blob/master/CODE_OF_CONDUCT.md).

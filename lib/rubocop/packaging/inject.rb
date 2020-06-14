@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-# The original code is from https://github.com/rubocop-hq/rubocop-rspec/blob/master/lib/rubocop/rspec/inject.rb
-# See https://github.com/rubocop-hq/rubocop-rspec/blob/master/MIT-LICENSE.md
 module RuboCop
   module Packaging
     # Because RuboCop doesn't yet support plugins, we have to monkey patch in a

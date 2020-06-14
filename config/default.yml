@@ -1,6 +1,6 @@
-# Write it!
+# This is the default configuration file.
 
 Packaging/GemspecGit:
-  Description: 'TODO: Write a description of the cop.'
-  Enabled: pending
+  Description: 'Use pure Ruby alternative instead of `git ls-files`'
+  Enabled: true
   VersionAdded: '0.86'

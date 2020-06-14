@@ -1,15 +1,21 @@
-require "bundler/gem_tasks"
-require "rspec/core/rake_task"
+# frozen_string_literal: true
+
+require 'bundler/gem_tasks'
+require 'rspec/core/rake_task'
+require 'rubocop/rake_task'
+
+locallib = File.join(File.dirname(__FILE__), 'lib')
+$LOAD_PATH.unshift locallib
+
+Dir['tasks/**/*.rake'].each { |t| load t }
 
 RSpec::Core::RakeTask.new(:spec)
+RuboCop::RakeTask.new
 
-task :default => :spec
-
-require 'rspec/core/rake_task'
-
-RSpec::Core::RakeTask.new(:spec) do |spec|
-  spec.pattern = FileList['spec/**/*_spec.rb']
-end
+task default: %i[
+  spec
+  rubocop
+]
 
 desc 'Generate a new cop with a template'
 task :new_cop, [:cop] do |_task, args|
