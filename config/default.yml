@@ -9,3 +9,8 @@ Packaging/RelativeRequireToLib:
   Description: 'Avoid using `require` with relative path to lib.'
   Enabled: true
   VersionAdded: '0.86'
+
+Packaging/RequireRelativeToLib:
+  Description: 'Avoid using `require_relative` to lib.'
+  Enabled: true
+  VersionAdded: '0.86'
